@@ -27,3 +27,6 @@ func main() {
 
 * This program consists of **two goroutines**. The first goroutine is implicit and is the **main function** itself.
 The second goroutine is created when we call **go f(0)**.
+
+* Normally, when we invoke a function, our program will execute all the statement in a function and then return to the next line following the invocation. || With a **goroutine**, we return immediately to the next line and don't wait for the function to complete. This is why we included `fmt.Scanln(&input)`; without it, the program would exit before being given the opportunity to print all the numbers.
+
